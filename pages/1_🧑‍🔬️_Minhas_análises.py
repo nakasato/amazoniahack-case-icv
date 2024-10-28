@@ -21,7 +21,7 @@ st.set_page_config(layout='wide')
 
 st.title('🧑‍🔬️ Minhas análises')
 st.markdown('''
-            Aqui você tem liberdade para fazer suas **próprias consultas SQL e análises**. Seus resultados são analisados em tempo real pelo GPT-4.
+            Aqui você tem liberdade para fazer suas **próprias consultas SQL e análises**. Seus resultados são analisados em tempo real pelo gpt-4o-mini.
             ''')
 st.markdown('''---''')
 
@@ -48,15 +48,13 @@ if input_sql:
             ans = db.gpt(prompt=PROMPT_INSIGHTS.format(user_df.head(100)))
             st.success(ans)
 
-###########
-
-
+# Chat
 st.subheader("🤖 Mais dúvidas? Converse com nossa IA!")
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 if "openai_model" not in st.session_state:
-    st.session_state["openai_model"] = "gpt-4"
+    st.session_state["openai_model"] = "gpt-4o-mini"
 
 if "messages" not in st.session_state:
     st.session_state.messages = []

@@ -6,8 +6,7 @@ from openai import OpenAI
 import streamlit as st
 
 
-def gpt(prompt, model='gpt-4'):
-    # Available models: 'gpt-3.5-turbo' and 'gpt-4'
+def gpt(prompt, model='gpt-4o-mini'):
     client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
     response = client.chat.completions.create(
         model=model,

@@ -10,7 +10,7 @@ st.markdown('''
             Bem-vindo ao Wood Tracker, um **sistema automatizado para integração e análise inteligente de dados públicos** do IBAMA, Sinaflor e Imaflora.
 
             O sistema permite que os usuários subam suas próprias bases de dados para análises conjuntas, além de alavancar o uso integrado de 
-            **modelos de IA Generativa como GPT-4** para auxiliá-los na geração de insights acionáveis.
+            **modelos de IA Generativa como gpt-4o-mini** para auxiliá-los na geração de insights acionáveis.
             ''')
 st.markdown('''---''')
 
